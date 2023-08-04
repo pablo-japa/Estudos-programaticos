@@ -1,12 +1,14 @@
-package model;
+package Model;
 
 public class Pais {
 	private String nome;
 	private String capital;
+	private int populacao;
 	
-	public Pais(String nome, String capital) {
+	public Pais(String nome, String capital, int populacao) {
 		this.nome = nome;
 		this.capital = capital;
+		this.populacao = populacao;
 	}
 
 	public String getNome() {
@@ -23,6 +25,14 @@ public class Pais {
 
 	public void setCapital(String capital) {
 		this.capital = capital;
+	}
+
+	public int getPopulacao() {
+		return populacao;
+	}
+
+	public void setPopulacao(int populacao) {
+		this.populacao = populacao;
 	}
 	
 
