@@ -1,9 +1,9 @@
-package controller;
+package Controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import model.Pais;
-import view.PaisView;
+import Model.Pais;
+import View.PaisView;
 
 public class PaisController {
 	private List<Pais> listaDePaises;
@@ -14,12 +14,16 @@ public class PaisController {
 		paisView = new PaisView();
 	}
 	
-	public void adicionarPais(String nome, String capital) {
-		Pais pais = new Pais(nome, capital);
+	public void adicionarPais(String nome, String capital, int populacao) {
+		Pais pais = new Pais(nome, capital, populacao);
 		listaDePaises.add(pais);
 	}
 	public void exibirListaDePaises() {
 		paisView.exibirListaDePaises(listaDePaises);
+	
+	}
+	public void removerPais() {
+		listaDePaises.remove(0);
 	}
 
 }
