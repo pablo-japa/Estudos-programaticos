@@ -1,8 +1,8 @@
-package view; 
+package View; 
 
 import java.util.List;
 
-import model.Pais;
+import Model.Pais;
 
 public class PaisView {
 	public void exibirListaDePaises(List<Pais> paises) {
@@ -10,7 +10,7 @@ public class PaisView {
 		System.out.println("-----------------------");
 		
 		for (Pais pais : paises) {
-			System.out.println("Pais: " + pais.getNome() + " capital: " + pais.getCapital());
+			System.out.println("Pais: " + pais.getNome() + " capital: " + pais.getCapital() + " População: " + pais.getPopulacao());
 		}
 		
 	}
