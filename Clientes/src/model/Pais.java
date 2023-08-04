@@ -4,7 +4,7 @@ public class Pais {
 	private String nome;
 	private String capital;
 	private int populacao;
-	
+
 	public Pais(String nome, String capital, int populacao) {
 		this.nome = nome;
 		this.capital = capital;
@@ -34,7 +34,5 @@ public class Pais {
 	public void setPopulacao(int populacao) {
 		this.populacao = populacao;
 	}
-	
 
 }
-
