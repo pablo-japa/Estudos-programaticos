@@ -42,7 +42,7 @@ public class Main {
 			System.out.println("Saindo...");
 			System.out.println("--------//---------//---------");
 		}
-	}
+		}
 		scanner.close();
 
 	}
