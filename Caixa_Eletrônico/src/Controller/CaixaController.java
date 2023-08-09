@@ -11,9 +11,10 @@ public class CaixaController {
 
 	public CaixaController(double saldo, CaixaView caixaView) {
 		caixaModel = new CaixaModel(saldo);
+		this.caixaView = caixaView;
 	}
 
-	public void depositarSaldo(double valor, double saldo) {
+	public void depositarSaldo(double valor) {
 		if (valor > 0) {
 			caixaModel.setSaldo(caixaModel.getSaldo() + valor);
 			caixaView.exibirDepositoSucesso(valor);
@@ -21,10 +22,23 @@ public class CaixaController {
 			caixaView.exibirMensagemValorInvalido(valor);
 		}
 	}
-	public void exibirSaldo(CaixaView caixaView){
+	public void exibirSaldo(){
 		double saldo = caixaModel.getSaldo();
 		caixaView.exibirDepositoSucesso(saldo);
 		
 }
+	public void saldoAtual(){
+		double saldo = caixaModel.getSaldo();
+		caixaView.exibirSaldo(saldo);
+		
+	}
+	public void sacarSaldo(double valor) {
+		if(valor > 0 && valor <= caixaModel.getSaldo()) {
+			caixaModel.setSaldo(caixaModel.getSaldo() - valor);
+			caixaView.exibirSaqueSucesso( caixaModel.getSaldo());
+		} else {
+			caixaView.exibirSaqueInvalido(valor);
+		}
+		
+	}
 }
-
