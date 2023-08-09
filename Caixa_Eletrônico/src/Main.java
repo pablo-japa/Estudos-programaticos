@@ -18,18 +18,29 @@ public class Main {
 		System.out.println("2. Depositar");
 		System.out.println("3. Sacar Saldo");
 		System.out.println("4. Sair");
-		System.out.print("Escolha uma opÁ„o: ");
+		System.out.print("Escolha uma op√ß√£o: ");
 		opcao = scanner.nextInt();
 		
 		switch (opcao) {
 		case 1:
-			caixaController.exibirSaldo();
+			caixaController.saldoAtual();
 			break;
 		case 2:
 			System.out.println("Quantidade a depositar: ");
-			scanner.nextDouble();
-			
+			//double valorDeposito = scanner.nextDouble();
+			//caixaController.depositarSaldo(valorDeposito, valorDeposito);
+			double valorDeposito = scanner.nextDouble();
+            caixaController.depositarSaldo(valorDeposito);			
 			break;
+		case 3:
+			System.out.println("Valor a Sacar: ");
+			double valorSaque = scanner.nextDouble();
+			caixaController.sacarSaldo(valorSaque);
+			break;
+		default:
+			System.out.println("-------Caixa Eletr√¥nico-------");
+			System.out.println("Saindo...");
+			System.out.println("--------//---------//---------");
 		}
 	}
 		scanner.close();
