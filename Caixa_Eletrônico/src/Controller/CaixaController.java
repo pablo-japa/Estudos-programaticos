@@ -26,7 +26,7 @@ public class CaixaController {
 		double saldo = caixaModel.getSaldo();
 		caixaView.exibirDepositoSucesso(saldo);
 		
-}
+	}
 	public void saldoAtual(){
 		double saldo = caixaModel.getSaldo();
 		caixaView.exibirSaldo(saldo);
